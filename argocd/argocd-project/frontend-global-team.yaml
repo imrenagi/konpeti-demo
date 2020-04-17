@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: frontend-web-global
+  namespace: argocd
+spec:
+  description: frontend-web deployed in southeast asia and us central cluster for global team
+  
+  # a project may have multiple repositories
+  sourceRepos:
+  - 'https://github.com/imrenagi/konpeti-demo.git'
+  destinations:
+  - namespace: konpeti
+    server: https://35.223.53.101
+  - namespace: konpeti
+    server: https://34.87.109.130

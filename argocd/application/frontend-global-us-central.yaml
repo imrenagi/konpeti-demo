@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: frontend-web-global-us-central
+  namespace: argocd
+spec:
+  project: frontend-web-global
+  source:
+    repoURL: https://github.com/imrenagi/konpeti-demo.git
+    targetRevision: master
+    path: app
+  # Destination cluster and namespace to deploy the application
+  destination:
+    server: https://35.223.53.101
+    namespace: konpeti
