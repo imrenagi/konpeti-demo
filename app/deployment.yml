@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend-web
-        image: gcr.io/schoters-stg/frontend:latest
+        image: gcr.io/schoters-stg/frontend:v0.0.1
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
