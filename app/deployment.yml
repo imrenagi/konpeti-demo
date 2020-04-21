@@ -27,7 +27,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend-svc
-  namespace: konpeti
+  namespace: test
 spec:
   selector:
     app: frontend-web
